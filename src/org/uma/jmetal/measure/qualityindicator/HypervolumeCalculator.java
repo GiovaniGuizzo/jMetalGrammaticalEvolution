@@ -20,6 +20,14 @@ public class HypervolumeCalculator extends Hypervolume<List<? extends Solution<?
         this.minimumValues = null;
     }
 
+    public double[] getMaximumValues() {
+        return maximumValues;
+    }
+
+    public double[] getMinimumValues() {
+        return minimumValues;
+    }
+
     public void addParetoFront(Front front) {
         double[] tempMinimum = FrontUtils.getMinimumValues(front);
         double[] tempMaximum = FrontUtils.getMaximumValues(front);
