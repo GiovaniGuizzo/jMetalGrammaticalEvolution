@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo java -cp ../../dist/*:../../dist/lib/* org.uma.jmetal.irace.HookEvaluate $2 | bash > HV_$2.txt
+
+cost=$(< HV_$2.txt)
+
+echo -$cost
+
+rm FUN_$2.txt
+rm VAR_$2.txt
+rm TIME_$2.txt
+rm HV_$2.txt
+rm $2_STDERR.txt
+rm $2_PARAMS.txt
+rm $2_STDOUT.txt
+
+exit $?

@@ -10,7 +10,7 @@
 parameterFile = "./parameters.txt"
 
 ## Directory where the programs will be run.
-execDir = "./"
+#execDir = "./arena"
 
 ## Directory where tuning instances are located, either absolute path or
 ## relative to current directory.
@@ -18,16 +18,16 @@ instanceDir = "./problems"
 
 ## The script called for each candidate that launches the program to be tuned.
 ## See templates/hook-run.tmpl
-hookRun = "./hook-run.bat"
+hookRun = "./hook-run"
 
 ## Optional script that provides a numeric value for each candidate.
 ## See templates/hook-evaluate.tmpl
-hookEvaluate = "./hook-evaluate.bat"
+hookEvaluate = "./hook-evaluate"
 
 ## The maximum number of runs (invocations of hookRun) that will performed. It
 ## determines the (maximum) budget of experiments for the tuning, unless
 ## timeBudget is positive.
-maxExperiments = 420
+maxExperiments = 1000
 
 ## Indicates the number of decimal places to be considered for the
 ## real parameters.

@@ -1,8 +1,5 @@
 @ECHO OFF
 
-IF NOT EXIST arena mkdir arena
-cd arena
-
 set arguments=%*
 set arguments=%arguments:\=%
 

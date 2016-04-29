@@ -1,7 +1,5 @@
 @ECHO OFF
 
-cd arena
-
 java -cp ../../dist/* org.uma.jmetal.irace.HookEvaluate %2 > HV_%2.txt
 
 set /p cost=<HV_%2.txt

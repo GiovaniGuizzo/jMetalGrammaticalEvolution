@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo java -cp ../../dist/*:../../dist/lib/* org.uma.jmetal.irace.HookRun "$@" | bash 1> $2_STDOUT.txt 2> $2_STDERR.txt
+
+exit $?
