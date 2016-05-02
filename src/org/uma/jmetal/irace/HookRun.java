@@ -68,6 +68,7 @@ public class HookRun {
             params = Arrays.stream(args).collect(Collectors.joining(" "));
 
             writer.write(params);
+            writer.write("\n");
         }
     }
 

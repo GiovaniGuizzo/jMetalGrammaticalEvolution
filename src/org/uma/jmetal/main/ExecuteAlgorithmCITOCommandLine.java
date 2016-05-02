@@ -55,12 +55,13 @@ public class ExecuteAlgorithmCITOCommandLine {
             throw new ParameterException("The following option is required: --tournamentSize");
         }
 
-        if ((cmd.builder.getCrossoverOperator() != null && !cmd.builder.getCrossoverOperator().isEmpty())
+        if ((cmd.builder.getCrossoverOperator() != null && !cmd.builder.getCrossoverOperator().trim().isEmpty())
                 && cmd.builder.getCrossoverProbability() == 0.0) {
+            System.out.println("Valor do parametro: -" + cmd.builder.getCrossoverOperator().trim() + "-");
             throw new ParameterException("The following option is required: --crossoverProbability");
         }
 
-        if ((cmd.builder.getMutationOperator() != null && !cmd.builder.getMutationOperator().isEmpty())
+        if ((cmd.builder.getMutationOperator() != null && !cmd.builder.getMutationOperator().trim().isEmpty())
                 && cmd.builder.getMutationProbability() == 0.0) {
             throw new ParameterException("The following option is required: --mutationProbability");
         }
