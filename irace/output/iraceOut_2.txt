@@ -1,0 +1,407 @@
+irace	version: 1.07.1202
+********************************************************************************
+* irace: An implementation in R of Iterated Race                               *
+* Copyright (C) 2010-2014                                                      *
+* Manuel Lopez-Ibanez     <manuel.lopez-ibanez@ulb.ac.be>                      *
+* Jeremie Dubois-Lacoste  <jeremie.dubois-lacoste@ulb.ac.be>                   *
+*                                                                              *
+* This is free software, and you are welcome to redistribute it under certain  *
+* conditions.  See the GNU General Public License for details. There is NO     *
+* warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  *
+*                                                                              *
+* irace builds upon previous code from the race package                        *
+* Copyright (C) 2003 Mauro Birattari                                           *
+********************************************************************************
+Warning: A default configuration file './tune-conf' has been found and will be read
+# 2016-05-03 17:07:24 BRT: Initialization
+# nbIterations: 6
+# minNbSurvival: 6
+# nbParameters: 19
+# seed: 723316765
+# confidence level: 0.95
+# remainingBudget: 10000
+# mu: 5
+
+# 2016-05-03 17:07:24 BRT: Iteration 1 of 6
+# experimentsUsedSoFar: 0
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 10000
+# currentBudget: 1666
+# nbCandidates: 277
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        277|        277|         -1|        277|01:46:46|
+|x|          2|        277|        272|         -1|        554|01:52:25|
+|x|          3|        277|        272|         -1|        831|01:48:03|
+|x|          4|        277|        272|         -1|       1108|01:52:47|
+|-|          5|         36|        272|    -0.9999|       1385|01:53:58|
+|-|          6|          8|        272|    -0.9998|       1421|00:40:01|
+|-|          7|          2|        272|    -0.9997|       1429|00:05:58|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         272	mean value:    -0.9997
+
+Description of the selected candidate:
+    .ID. populationSize initialization selectionOperator              selectionSource crossoverOperator      mutationOperator       reproduction   replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+272  272            200   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"           \\" \\" \\"Insert Mutation\\" \\"Steady State\\" \\"Ranking\\"           0           <NA>                  \\" \\"                    \\" \\"                 <NA>                 1.0        <NA>                   <NA>                     <NA>   \\"Dominance Strength\\"          \\"Adaptive Grid\\"       NA
+
+
+# Elite candidates:
+    populationSize initialization selectionOperator              selectionSource     crossoverOperator      mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy
+272            200   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"               \\" \\" \\"Insert Mutation\\" \\"Steady State\\"      \\"Ranking\\"           0           <NA>                  \\" \\"                    \\" \\"                 <NA>                 1.0        <NA>                   <NA>                     <NA>   \\"Dominance Strength\\"          \\"Adaptive Grid\\"
+139             50   \\"Random\\"     \\"Ranking\\"             \\"Population\\" \\"Cycle Crossover\\"   \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         2.0           <NA>        \\"Raw Fitness\\"                    \\" \\"                  0.9                 1.0           0      \\"Raw Fitness\\"                  \\" \\"                       <NA>                         <NA>
+# 2016-05-04 03:07:27 BRT: Iteration 2 of 6
+# experimentsUsedSoFar: 1429
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 8571
+# currentBudget: 1714
+# nbCandidates: 244
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        244|         35|         -1|        244|01:20:32|
+|x|          2|        244|        102|    -0.9999|        488|01:19:53|
+|x|          3|        244|        102|    -0.9999|        732|01:21:53|
+|x|          4|        244|        102|    -0.9999|        976|01:20:49|
+|-|          5|         24|        102|    -0.9999|       1220|01:20:48|
+|-|          6|          5|        102|    -0.9999|       1244|00:15:37|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         102	mean value:    -0.9999
+
+Description of the selected candidate:
+    .ID. populationSize initialization selectionOperator  selectionSource   crossoverOperator    mutationOperator       reproduction   replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+377  377            150   \\"Random\\"     \\"Ranking\\" \\"Population\\" \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Ranking\\"           0           <NA>        \\"Raw Fitness\\"        \\"Adaptive Grid\\"                  1.0                 1.0        <NA>                   <NA>                     <NA>                    \\" \\"                      \\" \\"      272
+
+
+# Elite candidates:
+    populationSize                            initialization  selectionOperator              selectionSource     crossoverOperator         mutationOperator                 reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy
+377            150                              \\"Random\\"      \\"Ranking\\"             \\"Population\\"   \\"PMX Crossover\\"      \\"Swap Mutation\\"           \\"Steady State\\"      \\"Ranking\\"           0           <NA>        \\"Raw Fitness\\"        \\"Adaptive Grid\\"                  1.0                 1.0        <NA>                   <NA>                           <NA>                    \\" \\"                      \\" \\"
+505            100 \\"Parallel Diversified Initialization\\" \\"K Tournament\\" \\"Archive and Population\\" \\"Cycle Crossover\\" \\"Inversion Mutation\\" \\"Generational One Child\\"      \\"Ranking\\"         2.0              6     \\"Dominance Rank\\"                    \\" \\"                  0.9                 0.8        <NA>      \\"Raw Fitness\\"    \\"K-th Nearest Neighbor\\"          \\"Raw Fitness\\"      \\"Crowding Distance\\"
+310            150                              \\"Random\\"      \\"Ranking\\"             \\"Population\\"               \\" \\"      \\"Swap Mutation\\"           \\"Steady State\\" \\"Generational\\"         1.0           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                 <NA>                 1.0           0                \\" \\" \\"Hypervolume Contribution\\"                       <NA>                         <NA>
+379             50 \\"Parallel Diversified Initialization\\"       \\"Random\\"             \\"Population\\"   \\"PMX Crossover\\"    \\"Insert Mutation\\"           \\"Steady State\\" \\"Generational\\"         1.0           <NA>                     <NA>                       <NA>                 0.95                 0.7         0.1                \\" \\"    \\"K-th Nearest Neighbor\\"      \\"Dominance Depth\\"  \\"K-th Nearest Neighbor\\"
+499            150 \\"Parallel Diversified Initialization\\" \\"K Tournament\\"             \\"Population\\" \\"Cycle Crossover\\"    \\"Insert Mutation\\" \\"Generational One Child\\" \\"Generational\\"         1.5             10    \\"Dominance Depth\\"                    \\" \\"                  0.9                 1.0        0.05   \\"Dominance Rank\\"                        \\" \\"          \\"Raw Fitness\\"          \\"Adaptive Grid\\"
+# 2016-05-04 10:07:03 BRT: Iteration 3 of 6
+# experimentsUsedSoFar: 2673
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 7327
+# currentBudget: 1831
+# nbCandidates: 228
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        228|        212|    -0.9995|        228|01:29:45|
+|x|          2|        228|        212|    -0.9997|        456|01:29:52|
+|x|          3|        228|        212|    -0.9998|        684|01:31:45|
+|x|          4|        228|        212|    -0.9996|        912|01:29:41|
+|-|          5|         24|        212|    -0.9997|       1140|01:32:28|
+|-|          6|          3|        212|     -0.998|       1164|00:15:41|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         212	mean value:     -0.998
+
+Description of the selected candidate:
+    .ID. populationSize                            initialization selectionOperator              selectionSource   crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+726  726            150 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\" \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA>        \\"Raw Fitness\\"                    \\" \\"                  1.0                 1.0           0      \\"Raw Fitness\\"                  \\" \\"                       <NA>                         <NA>      377
+
+
+# Elite candidates:
+    populationSize                            initialization selectionOperator              selectionSource          crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy  selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy
+726            150 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\"        \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA>        \\"Raw Fitness\\"                     \\" \\"                  1.0                 1.0           0      \\"Raw Fitness\\"                  \\" \\"                       <NA>                         <NA>
+675            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\" \\"Two Points Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"         \\"Adaptive Grid\\"                  0.5                 1.0         0.1                \\" \\"      \\"Adaptive Grid\\"       \\"Dominance Rank\\"          \\"Adaptive Grid\\"
+629            150                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"        \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\"      \\"Ranking\\"           0           <NA>        \\"Raw Fitness\\" \\"K-th Nearest Neighbor\\"                 0.95                 1.0        <NA>                   <NA>                     <NA>                    \\" \\"  \\"K-th Nearest Neighbor\\"
+# 2016-05-04 17:56:19 BRT: Iteration 4 of 6
+# experimentsUsedSoFar: 3837
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 6163
+# currentBudget: 2054
+# nbCandidates: 228
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        228|        227|    -0.9997|        228|01:17:50|
+|x|          2|        228|        227|    -0.9996|        456|01:16:54|
+|x|          3|        228|        227|    -0.9995|        684|01:17:51|
+|x|          4|        228|        227|    -0.9994|        912|01:18:22|
+|-|          5|         16|        227|    -0.9993|       1140|01:17:29|
+|=|          6|         16|        227|    -0.8349|       1156|00:05:28|
+|=|          7|         16|        227|    -0.7935|       1172|00:05:17|
+|=|          8|         16|        227|    -0.7694|       1188|00:05:36|
+|-|          9|         11|        227|     -0.795|       1204|00:05:06|
+|=|         10|         11|        227|     -0.758|       1215|00:03:34|
+|=|         11|         11|        224|    -0.8641|       1226|00:03:27|
+|=|         12|         11|        224|    -0.7959|       1237|00:03:24|
+|=|         13|         11|        227|    -0.6552|       1248|00:02:49|
+|=|         14|         11|        224|    -0.7475|       1259|00:03:40|
+|=|         15|         11|        224|    -0.7621|       1270|00:03:34|
+|=|         16|         11|        224|    -0.7626|       1281|00:03:25|
+|=|         17|         11|        224|    -0.7743|       1292|00:03:44|
+|=|         18|         11|        224|    -0.7365|       1303|00:03:48|
+|=|         19|         11|        224|     -0.705|       1314|00:03:13|
+|=|         20|         11|        224|    -0.6882|       1325|00:03:39|
+|=|         21|         11|        224|    -0.6803|       1336|00:03:35|
+|=|         22|         11|        224|    -0.6785|       1347|00:03:35|
+|=|         23|         11|        224|    -0.6896|       1358|00:03:20|
+|=|         24|         11|        224|    -0.7006|       1369|00:03:07|
+|=|         25|         11|        224|    -0.6749|       1380|00:03:21|
+|=|         26|         11|        224|     -0.662|       1391|00:03:19|
+|=|         27|         11|        224|     -0.643|       1402|00:03:27|
+|=|         28|         11|        224|    -0.6441|       1413|00:03:16|
+|=|         29|         11|        224|     -0.622|       1424|00:03:11|
+|=|         30|         11|        224|    -0.6263|       1435|00:03:22|
+|=|         31|         11|        224|    -0.6213|       1446|00:03:17|
+|=|         32|         11|        224|    -0.6026|       1457|00:03:20|
+|=|         33|         11|        224|    -0.5915|       1468|00:03:13|
+|=|         34|         11|        224|    -0.5949|       1479|00:03:09|
+|=|         35|         11|        224|    -0.5809|       1490|00:02:56|
+|=|         36|         11|        212|    -0.5982|       1501|00:02:46|
+|=|         37|         11|        212|    -0.6069|       1512|00:02:58|
+|=|         38|         11|        212|    -0.6171|       1523|00:03:00|
+|=|         39|         11|        212|    -0.6169|       1534|00:02:47|
+|=|         40|         11|        212|    -0.6146|       1545|00:03:06|
+|=|         41|         11|        212|    -0.6185|       1556|00:02:41|
+|=|         42|         11|        212|    -0.6178|       1567|00:03:03|
+|-|         43|          6|        212|    -0.6199|       1578|00:02:48|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         212	mean value:    -0.6199
+
+Description of the selected candidate:
+    .ID. populationSize                            initialization selectionOperator  selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+951  951            100 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"      \\"Adaptive Grid\\"       \\"Dominance Rank\\"          \\"Adaptive Grid\\"      675
+
+
+# Elite candidates:
+    populationSize                            initialization selectionOperator              selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize   archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy   replacementDiversityStrategy
+951            100 \\"Parallel Diversified Initialization\\"     \\"Ranking\\"             \\"Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.5                 1.0         0.1        \\"Raw Fitness\\"            \\"Adaptive Grid\\"       \\"Dominance Rank\\"            \\"Adaptive Grid\\"
+965            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"        \\"Cycle Crossover\\" \\"Swap Mutation\\" \\"Steady State\\"      \\"Ranking\\"           0           <NA> \\"Dominance Strength\\"        \\"Adaptive Grid\\"                  0.5                 1.0        <NA>                     <NA>                           <NA>       \\"Dominance Rank\\"            \\"Adaptive Grid\\"
+963            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"                      \\" \\" \\"Swap Mutation\\" \\"Steady State\\"      \\"Ranking\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                 <NA>                 1.0        <NA>                  \\" \\"            \\"Adaptive Grid\\"       \\"Dominance Rank\\" \\"Hypervolume Contribution\\"
+900            100 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\"        \\"Cycle Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"                    \\" \\"                  1.0                 1.0        0.05 \\"Dominance Strength\\"            \\"Adaptive Grid\\"                    \\" \\"    \\"K-th Nearest Neighbor\\"
+850            100                              \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"   \\"Two Points Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.9                 1.0           0     \\"Dominance Rank\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+762            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"           0           <NA>        \\"Raw Fitness\\"        \\"Adaptive Grid\\"                 0.95                 1.0           0                     <NA>                           <NA>                       <NA>                           <NA>
+# 2016-05-05 02:37:30 BRT: Iteration 5 of 6
+# experimentsUsedSoFar: 5415
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 4585
+# currentBudget: 2292
+# nbCandidates: 229
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        229|        218|         -1|        229|00:57:45|
+|x|          2|        229|        228|    -0.9948|        458|00:58:58|
+|x|          3|        229|        228|    -0.9965|        687|00:58:22|
+|x|          4|        229|        228|    -0.9974|        916|00:59:17|
+|-|          5|         16|        228|    -0.9912|       1145|01:00:11|
+|=|          6|         16|        223|    -0.9155|       1161|00:03:56|
+|-|          7|          4|        223|    -0.9257|       1177|00:03:55|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         223	mean value:    -0.9257
+
+Description of the selected candidate:
+     .ID. populationSize initialization selectionOperator  selectionSource   crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+1184 1184            100   \\"Random\\"     \\"Ranking\\" \\"Population\\" \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"                  \\" \\"          \\"Raw Fitness\\"          \\"Adaptive Grid\\"      951
+
+
+# Elite candidates:
+     populationSize initialization selectionOperator              selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy
+1184            100   \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"                        \\" \\"          \\"Raw Fitness\\"          \\"Adaptive Grid\\"
+1189            100   \\"Random\\"     \\"Ranking\\"             \\"Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"        \\"Adaptive Grid\\"                  0.5                 0.5         0.1                \\" \\"            \\"Adaptive Grid\\"   \\"Dominance Strength\\"          \\"Adaptive Grid\\"
+1144            100   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"   \\"Two Points Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.9                 1.0           0   \\"Dominance Rank\\" \\"Hypervolume Contribution\\"                       <NA>                         <NA>
+1046            100   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"   \\"Two Points Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"Crowding Distance\\"                  0.9                 1.0           0   \\"Dominance Rank\\" \\"Hypervolume Contribution\\"                       <NA>                         <NA>
+# 2016-05-05 07:40:00 BRT: Iteration 6 of 6
+# experimentsUsedSoFar: 6592
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 3408
+# currentBudget: 3408
+# nbCandidates: 340
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        340|        337|         -1|        340|01:55:20|
+|x|          2|        340|        337|    -0.9997|        680|01:56:00|
+|x|          3|        340|        337|    -0.9994|       1020|01:53:43|
+|x|          4|        340|        337|    -0.9995|       1360|02:08:20|
+|-|          5|         33|        337|    -0.9992|       1700|02:03:08|
+|=|          6|         33|        337|     -0.916|       1733|00:06:33|
+|-|          7|          5|        337|    -0.8683|       1766|00:05:10|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:         337	mean value:    -0.8683
+
+Description of the selected candidate:
+     .ID. populationSize initialization selectionOperator  selectionSource   crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+1523 1523            100   \\"Random\\"     \\"Ranking\\" \\"Population\\" \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA>     \\"Dominance Rank\\"        \\"Adaptive Grid\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"      \\"Adaptive Grid\\"          \\"Raw Fitness\\"          \\"Adaptive Grid\\"     1184
+
+
+# Elite candidates:
+     populationSize initialization selectionOperator              selectionSource          crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy     selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy   replacementDiversityStrategy
+1523            100   \\"Random\\"     \\"Ranking\\"             \\"Population\\"        \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA>     \\"Dominance Rank\\"            \\"Adaptive Grid\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"            \\"Adaptive Grid\\"          \\"Raw Fitness\\"            \\"Adaptive Grid\\"
+1521            100   \\"Random\\"     \\"Ranking\\"             \\"Population\\"        \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\" \\"Hypervolume Contribution\\"                  0.5                 1.0         0.1      \\"Raw Fitness\\"            \\"Adaptive Grid\\"          \\"Raw Fitness\\" \\"Hypervolume Contribution\\"
+1492            100   \\"Random\\"     \\"Ranking\\"             \\"Population\\"        \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA>        \\"Raw Fitness\\"                        \\" \\"                  0.5                 1.0        0.01                \\" \\"                        \\" \\"   \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"
+1384            200   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Two Points Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"        \\"Crowding Distance\\"                  0.9                 1.0           0                \\" \\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1505            100   \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"                    \\" \\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"                 <NA>                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+# 2016-05-05 17:48:21 BRT: Iteration 7 of 7
+# experimentsUsedSoFar: 8358
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 1642
+# currentBudget: 1642
+# nbCandidates: 164
+
+                            Markers:
+                               x No test is performed.
+                               - The test is performed and
+                                 some candidates are discarded.
+                               = The test is performed but
+                                 no candidate is discarded.
+
++-+-----------+-----------+-----------+-----------+-----------+--------+
+| |       Task|      Alive|       Best|  Mean best| Exp so far|Run Time|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+|x|          1|        164|        158|    -0.9997|        164|01:01:14|
+|x|          2|        164|        158|    -0.9953|        328|01:02:27|
+|x|          3|        164|        158|     -0.978|        492|01:02:58|
+|x|          4|        164|        158|    -0.9751|        656|01:02:41|
+|-|          5|         23|        136|    -0.9511|        820|01:02:13|
+|=|          6|         23|        136|    -0.8701|        843|00:18:04|
+|=|          7|         23|        139|    -0.8485|        866|00:17:32|
+|=|          8|         23|        139|    -0.8077|        889|00:16:33|
+|=|          9|         23|        139|    -0.7914|        912|00:17:40|
+|=|         10|         23|        139|    -0.7664|        935|00:17:18|
+|=|         11|         23|        139|    -0.7465|        958|00:17:37|
+|=|         12|         23|        104|    -0.7787|        981|00:16:35|
+|=|         13|         23|        104|    -0.7722|       1004|00:17:44|
+|=|         14|         23|        104|     -0.744|       1027|00:16:36|
+|=|         15|         23|        104|    -0.7198|       1050|00:16:58|
+|=|         16|         23|         43|    -0.6565|       1073|00:16:58|
+|-|         17|         16|         43|    -0.6559|       1096|00:16:56|
+|=|         18|         16|         43|    -0.6325|       1112|00:03:52|
+|=|         19|         16|         43|    -0.6362|       1128|00:04:11|
+|=|         20|         16|         43|     -0.628|       1144|00:04:02|
+|=|         21|         16|         43|    -0.6411|       1160|00:04:08|
+|=|         22|         16|         43|    -0.6335|       1176|00:04:03|
+|=|         23|         16|         43|    -0.6317|       1192|00:03:53|
+|=|         24|         16|         43|    -0.6268|       1208|00:03:54|
+|=|         25|         16|         43|     -0.622|       1224|00:04:06|
+|=|         26|         16|         43|    -0.6192|       1240|00:03:50|
+|=|         27|         16|         43|    -0.6079|       1256|00:04:12|
+|=|         28|         16|         43|    -0.5974|       1272|00:03:55|
+|=|         29|         16|         43|    -0.6022|       1288|00:04:18|
+|=|         30|         16|         43|    -0.5963|       1304|00:03:50|
+|=|         31|         16|         43|    -0.5898|       1320|00:03:51|
+|=|         32|         16|         43|    -0.5904|       1336|00:04:03|
+|=|         33|         16|         43|    -0.5963|       1352|00:03:54|
+|=|         34|         16|         43|    -0.6047|       1368|00:04:01|
+|=|         35|         16|         43|    -0.6017|       1384|00:04:03|
+|=|         36|         16|         43|    -0.6034|       1400|00:04:02|
+|=|         37|         16|         43|    -0.6095|       1416|00:03:59|
+|=|         38|         16|         43|    -0.6085|       1432|00:03:58|
+|=|         39|         16|         43|    -0.6132|       1448|00:04:03|
+|=|         40|         16|         43|    -0.6175|       1464|00:04:09|
+|=|         41|         16|         43|    -0.6222|       1480|00:03:49|
+|=|         42|         16|         43|    -0.6164|       1496|00:03:58|
+|=|         43|         16|         43|     -0.625|       1512|00:04:05|
+|=|         44|         16|         43|    -0.6186|       1528|00:04:00|
+|=|         45|         16|         43|    -0.6206|       1544|00:03:56|
+|=|         46|         16|         43|    -0.6226|       1560|00:04:13|
+|-|         47|          6|         43|    -0.6156|       1576|00:03:52|
++-+-----------+-----------+-----------+-----------+-----------+--------+
+
+Selected candidate:          43	mean value:    -0.6156
+
+Description of the selected candidate:
+     .ID. populationSize                            initialization selectionOperator              selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy  selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy replacementDiversityStrategy .PARENT.
+1564 1564             50 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\" \\"K-th Nearest Neighbor\\"                  0.8                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                         <NA>     1505
+
+
+# Elite candidates:
+     populationSize                            initialization selectionOperator              selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy     selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy   replacementDiversityStrategy
+1564             50 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"                  0.8                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1623            100                              \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"        \\"Crowding Distance\\"                 0.95                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1660            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\"      \\"Ranking\\"         1.5           <NA> \\"Dominance Strength\\" \\"Hypervolume Contribution\\"                  0.5                 1.0        <NA>      \\"Raw Fitness\\" \\"Hypervolume Contribution\\"          \\"Raw Fitness\\" \\"Hypervolume Contribution\\"
+1505            100                              \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"                      \\" \\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"                 <NA>                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1617            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.0           <NA> \\"Dominance Strength\\" \\"Hypervolume Contribution\\"                  0.5                 1.0           0      \\"Raw Fitness\\"                        \\" \\"                       <NA>                           <NA>
+1589            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"           0           <NA>        \\"Raw Fitness\\"                        \\" \\"                  0.5                 1.0        0.01                   <NA>                           <NA>   \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"
+# 2016-05-06 04:27:00 BRT: Stopped because there is no enough budget left to race newly sampled configurations
+# Iteration: 8
+# nbIterations: 8
+# experimentsUsedSoFar: 9934
+# timeUsedSoFar: 0
+# timeEstimate: 0
+# remainingBudget: 66
+# currentBudget: 66
+# number of elites: 6
+# nbCandidates: 6
+# mu: 5
+# Best candidates
+     populationSize                            initialization selectionOperator              selectionSource            crossoverOperator    mutationOperator       reproduction        replacement archiveSize tournamentSize selectionRankingStrategy     selectionDiversityStrategy crossoverProbability mutationProbability elitismSize archiveRankingStrategy       archiveDiversityStrategy replacementRankingStrategy   replacementDiversityStrategy
+1564             50 \\"Parallel Diversified Initialization\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"                  0.8                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1623            100                              \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"        \\"Crowding Distance\\"                 0.95                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1660            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\" \\"Single Point Crossover\\" \\"Swap Mutation\\" \\"Steady State\\"      \\"Ranking\\"         1.5           <NA> \\"Dominance Strength\\" \\"Hypervolume Contribution\\"                  0.5                 1.0        <NA>      \\"Raw Fitness\\" \\"Hypervolume Contribution\\"          \\"Raw Fitness\\" \\"Hypervolume Contribution\\"
+1505            100                              \\"Random\\"     \\"Ranking\\" \\"Archive and Population\\"                      \\" \\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.5           <NA> \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"                 <NA>                 1.0           0  \\"Dominance Depth\\" \\"Hypervolume Contribution\\"                       <NA>                           <NA>
+1617            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"         1.0           <NA> \\"Dominance Strength\\" \\"Hypervolume Contribution\\"                  0.5                 1.0           0      \\"Raw Fitness\\"                        \\" \\"                       <NA>                           <NA>
+1589            100                              \\"Random\\"     \\"Ranking\\"             \\"Population\\"          \\"PMX Crossover\\" \\"Swap Mutation\\" \\"Steady State\\" \\"Generational\\"           0           <NA>        \\"Raw Fitness\\"                        \\" \\"                  0.5                 1.0        0.01                   <NA>                           <NA>   \\"Dominance Strength\\"    \\"K-th Nearest Neighbor\\"
+# Best candidates (as commandlines)
+1  --populationSize 50 --initialization \"Parallel Diversified Initialization\" --selectionOperator \"Ranking\" --selectionSource \"Archive and Population\" --selectionRanking \"Dominance Strength\" --selectionDiversity \"K-th Nearest Neighbor\" --crossoverOperator \"Single Point Crossover\" --crossoverProbability 0.8 --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Generational\" --elitismSize 0 --archiveSize 1.5 --archiveRanking \"Dominance Depth\" --archiveDiversity \"Hypervolume Contribution\"
+2  --populationSize 100 --initialization \"Random\" --selectionOperator \"Ranking\" --selectionSource \"Archive and Population\" --selectionRanking \"Dominance Strength\" --selectionDiversity \"Crowding Distance\" --crossoverOperator \"Single Point Crossover\" --crossoverProbability 0.95 --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Generational\" --elitismSize 0 --archiveSize 1.5 --archiveRanking \"Dominance Depth\" --archiveDiversity \"Hypervolume Contribution\"
+3  --populationSize 100 --initialization \"Random\" --selectionOperator \"Ranking\" --selectionSource \"Population\" --selectionRanking \"Dominance Strength\" --selectionDiversity \"Hypervolume Contribution\" --crossoverOperator \"Single Point Crossover\" --crossoverProbability 0.5 --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Ranking\" --replacementRanking \"Raw Fitness\" --replacementDiversity \"Hypervolume Contribution\" --archiveSize 1.5 --archiveRanking \"Raw Fitness\" --archiveDiversity \"Hypervolume Contribution\"
+4  --populationSize 100 --initialization \"Random\" --selectionOperator \"Ranking\" --selectionSource \"Archive and Population\" --selectionRanking \"Dominance Strength\" --selectionDiversity \"K-th Nearest Neighbor\" --crossoverOperator \" \" --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Generational\" --elitismSize 0 --archiveSize 1.5 --archiveRanking \"Dominance Depth\" --archiveDiversity \"Hypervolume Contribution\"
+5  --populationSize 100 --initialization \"Random\" --selectionOperator \"Ranking\" --selectionSource \"Population\" --selectionRanking \"Dominance Strength\" --selectionDiversity \"Hypervolume Contribution\" --crossoverOperator \"PMX Crossover\" --crossoverProbability 0.5 --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Generational\" --elitismSize 0 --archiveSize 1.0 --archiveRanking \"Raw Fitness\" --archiveDiversity \" \"
+6  --populationSize 100 --initialization \"Random\" --selectionOperator \"Ranking\" --selectionSource \"Population\" --selectionRanking \"Raw Fitness\" --selectionDiversity \" \" --crossoverOperator \"PMX Crossover\" --crossoverProbability 0.5 --mutationOperator \"Swap Mutation\" --mutationProbability 1.0 --reproduction \"Steady State\" --replacement \"Generational\" --elitismSize 0.01 --replacementRanking \"Dominance Strength\" --replacementDiversity \"K-th Nearest Neighbor\" --archiveSize 0
