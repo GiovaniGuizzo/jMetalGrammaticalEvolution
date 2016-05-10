@@ -18,4 +18,4 @@
 #$ -o /dev/null
 #$ -e /dev/null
 
-echo java -cp ../dist/*:../dist/lib/* org.uma.jmetal.main.ExecuteAlgorithmCITOCommandLine --id "$2" --problemPath "$3/$4.txt" --outputPath "teste/CITO/$4/$1" --maxEvaluations 60000 "$5" | bash >> testError.txt
+echo java -cp ../dist/*:../dist/lib/* org.uma.jmetal.main.ExecuteAlgorithmCITOCommandLine --id "$2" --problemPath "$3/$4.txt" --outputPath "teste/CITO/$4/$1" --maxEvaluations 60000 "$5" | bash 2>> testError.txt

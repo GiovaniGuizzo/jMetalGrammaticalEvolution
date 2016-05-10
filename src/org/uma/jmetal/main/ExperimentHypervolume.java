@@ -21,10 +21,12 @@ import org.uma.jmetal.util.front.util.FrontUtils;
 public class ExperimentHypervolume {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException {
-//        args = new String[]{"60", "experiment/CITO/testing/", "NSGA-II,SPEA2,HITO-NSGA-II-CF,ALG_6"};
-        int generations = Integer.parseInt(args[0]);
-        String[] algorithms = args[2].split(",");
-        try (FileWriter tableWriter = new FileWriter(args[1] + "/TABLE.txt")) {
+        args = new String[]{"experiment/CITO/testing/", "NSGA-II,SPEA2,IBEA,"
+                + "ALG_0,ALG_1,ALG_2,ALG_3,ALG_4,ALG_5,ALG_6,ALG_7,ALG_8,ALG_9,"
+                + "IRACE_0,IRACE_1,IRACE_2,IRACE_3,IRACE_4,IRACE_5,IRACE_6,IRACE_7,IRACE_8,IRACE_9"};
+//        int generations = Integer.parseInt(args[0]);
+        String[] algorithms = args[1].split(",");
+        try (FileWriter tableWriter = new FileWriter(args[0] + "/TABLE.txt")) {
             //problem instance
             String[] problems = {"OO_MyBatis",
                 "OA_AJHsqldb",
@@ -44,7 +46,7 @@ public class ExperimentHypervolume {
 
             for (String problem : problems) {
                 tableWriter.append(problem + " & ");
-                File inputDir = new File(args[1] + "/" + problem);
+                File inputDir = new File(args[0] + "/" + problem);
                 HypervolumeCalculator calculator = new HypervolumeCalculator();
                 HypervolumeCalculator generationalCalculator = new HypervolumeCalculator();
 
@@ -56,6 +58,7 @@ public class ExperimentHypervolume {
 
                 for (File algorithmDir : algorithmVars) {
                     List<DoubleSolution> algorithmSolutions = new ArrayList();
+                    System.out.println(algorithmDir.getName());
                     for (File executionDir : algorithmDir.listFiles(file -> file.isDirectory())) {
                         File fun = executionDir.listFiles((dir, fileName) -> fileName.startsWith("FUN"))[0];
                         calculator.addParetoFront(fun.getPath());

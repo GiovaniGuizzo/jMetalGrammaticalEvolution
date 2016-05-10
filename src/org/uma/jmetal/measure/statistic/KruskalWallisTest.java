@@ -56,7 +56,7 @@ public class KruskalWallisTest {
             scriptWriter.append(script);
         }
 
-        ProcessBuilder processBuilder = new ProcessBuilder("R", "--slave", "-f", scriptFile.getAbsolutePath());
+        ProcessBuilder processBuilder = new ProcessBuilder(System.getProperty("os.name").contains("win") ? "R.exe" : "R", "--slave", "-f", scriptFile.getAbsolutePath());
         processBuilder.redirectOutput(outputFile);
 
         Process process = processBuilder.start();

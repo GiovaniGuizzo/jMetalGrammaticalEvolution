@@ -1,10 +1,10 @@
 #/bin/bash
 
 problemPath="../problems"
-I=0
+I=-1
 problems=("OO_MyBatis" "OA_AJHsqldb" "OA_AJHotDraw" "OO_BCEL" "OO_JHotDraw" "OA_HealthWatcher" "OA_TollSystems" "OO_JBoss")
 while read line; do
-	((I++))
+((I++))
 	for problem in "${problems[@]}"; do
 		for run in {0..29}; do
 			qsub ./qsubscriptTeste "IRACE_$I" "$run" "$problemPath" "$problem" "$line"
