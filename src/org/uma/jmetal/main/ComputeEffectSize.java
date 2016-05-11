@@ -11,8 +11,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.HashMap;
 import org.uma.jmetal.measure.qualityindicator.HypervolumeCalculator;
-import org.uma.jmetal.measure.statistic.EffectSize;
-import org.uma.jmetal.util.front.imp.ArrayFront;
+import org.uma.jmetal.measure.statistic.VarghaDelaneyEffectSize;
 
 /**
  *
@@ -30,15 +29,16 @@ public class ComputeEffectSize {
             "OO_BCEL",
             "OO_JHotDraw",
             "OA_HealthWatcher",
-            //                "OA_TollSystems",
+            "OA_TollSystems",
             "OO_JBoss"
         };
 
         String[] algorithms = new String[]{
-            "NSGA-II", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
+            //            "NSGA-II", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
+            "ALG_6", "IRACE_7", "NSGA-II", "SPEA2"
         };
 
-        DecimalFormat decimalFormatter = new DecimalFormat("0.00E0");
+        DecimalFormat decimalFormatter = new DecimalFormat("#0.00");
 
         try (FileWriter hypervolumeTableWriter = new FileWriter("experiment/CITO/testing/HYPERVOLUME_ES.txt")) {
 
@@ -54,7 +54,7 @@ public class ComputeEffectSize {
 
             for (int i = 0; i < algorithms.length; i++) {
                 for (int j = i + 1; j < algorithms.length + 1; j++) {
-                    hypervolumeLatexTableBuilder.append("c");
+                    hypervolumeLatexTableBuilder.append("l");
                 }
             }
 
@@ -64,7 +64,7 @@ public class ComputeEffectSize {
 
             for (int i = 0; i < algorithms.length - 1; i++) {
                 for (int j = i + 1; j < algorithms.length; j++) {
-                    hypervolumeLatexTableBuilder.append(" & \\textbf{").append(algorithms[i]).append("/").append(algorithms[j]).append("}");
+                    hypervolumeLatexTableBuilder.append(" & \\textbf{").append(algorithms[i].replaceAll("\\_", "\\\\_")).append("/").append(algorithms[j].replaceAll("\\_", "\\\\_")).append("}");
                 }
             }
 
@@ -92,7 +92,6 @@ public class ComputeEffectSize {
                 }
 
                 HashMap<String, double[]> hypervolumeHashMap = new HashMap<>();
-                HashMap<String, double[]> coverageHashMap = new HashMap<>();
 
                 for (String algorithm : algorithms) {
                     String path = "experiment/CITO/testing/" + problem + "/";
@@ -111,7 +110,7 @@ public class ComputeEffectSize {
                     hypervolumeHashMap.put(algorithm.replaceAll("-", ""), hypervolumes);
                 }
 
-                HashMap<String, HashMap<String, Double>> hypervolumeEffectSize = EffectSize.computeEffectSize(hypervolumeHashMap);
+                HashMap<String, HashMap<String, Double>> hypervolumeEffectSize = VarghaDelaneyEffectSize.computeEffectSize(hypervolumeHashMap);
 
                 for (int i = 0; i < algorithms.length - 1; i++) {
                     String groupA = algorithms[i];
@@ -120,7 +119,7 @@ public class ComputeEffectSize {
 
                         double hypervolumeValue = hypervolumeEffectSize.get(groupA.replaceAll("-", "")).get(groupB.replaceAll("-", ""));
 
-                        hypervolumeLatexTableBuilder.append(" & ").append(decimalFormatter.format(hypervolumeValue)).append(" (").append(EffectSize.interpretEffectSize(hypervolumeValue)).append(")");
+                        hypervolumeLatexTableBuilder.append(" & ").append(decimalFormatter.format(hypervolumeValue)).append(" (").append(VarghaDelaneyEffectSize.interpretEffectSize(hypervolumeValue)).append(")");
                     }
                 }
                 hypervolumeLatexTableBuilder.append("\\\\\n");

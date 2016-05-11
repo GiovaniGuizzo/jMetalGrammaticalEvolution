@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
-public class EffectSize {
+public class CohensDEffectSize {
 
     public static final String NEGLIGIBLE = "negligible";
     public static final String SMALL = "small";
@@ -53,7 +53,7 @@ public class EffectSize {
         new FileWriter(inputFile).append(script).flush();
 
         ProcessBuilder builder = new ProcessBuilder();
-        builder.command("R", "--slave", "-f", inputFile.getAbsolutePath());
+        builder.command(System.getProperty("os.name").contains("win") ? "R.exe" : "R", "--slave", "-f", inputFile.getAbsolutePath());
         builder.redirectOutput(outputFile);
         builder.start().waitFor();
 
