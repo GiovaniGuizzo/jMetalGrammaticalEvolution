@@ -1,14 +1,13 @@
 package org.uma.jmetal.util;
 
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.Map;
 
-public class HashMapToLatexConverter {
+public class MapToLatexConverter {
 
     private static final Comparator<Map.Entry<String, ? extends Object>> DEFAULT_ENTRY_COMPARATOR = (entry, entry2) -> entry.getKey().compareTo(entry2.getKey());
 
-    public static <T> String convert(String title, String label, HashMap<String, HashMap<String, T>> data) {
+    public static <T> String convert(String title, String label, Map<String, Map<String, T>> data) {
         StringBuilder tableBuilder = new StringBuilder();
 
         tableBuilder.append(composeTableHeader(title, label, data));
@@ -18,7 +17,7 @@ public class HashMapToLatexConverter {
         return tableBuilder.toString();
     }
 
-    public static <T> String composeTableHeader(String title, String label, HashMap<String, HashMap<String, T>> data) {
+    public static <T> String composeTableHeader(String title, String label, Map<String, Map<String, T>> data) {
         StringBuilder tableBuilder = new StringBuilder();
         tableBuilder
                 .append("\\begin{table}[!htb]\n")
@@ -43,17 +42,17 @@ public class HashMapToLatexConverter {
         return tableBuilder.toString();
     }
 
-    public static <T> String composeTableCore(HashMap<String, HashMap<String, T>> data) {
+    public static <T> String composeTableCore(Map<String, Map<String, T>> data) {
         StringBuilder tableBuilder = new StringBuilder();
 
         data.entrySet().stream().sorted(DEFAULT_ENTRY_COMPARATOR).forEach((problemEntry) -> {
             String problem = problemEntry.getKey();
-            HashMap<String, T> problemData = problemEntry.getValue();
+            Map<String, T> problemData = problemEntry.getValue();
 
             tableBuilder.append("\t\t").append(problem.replaceAll("\\_", "\\\\_")).append(" ");
 
             problemData.entrySet().stream().sorted(DEFAULT_ENTRY_COMPARATOR).forEach((item) -> {
-                tableBuilder.append("& ").append(item.getValue().toString()).append(" ");
+                tableBuilder.append("& ").append(item.getValue() instanceof Double ? String.format("%.2f", (Double) item.getValue()) : item.getValue().toString()).append(" ");
             });
             tableBuilder.append("\\\\\n");
         });

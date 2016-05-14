@@ -28,9 +28,9 @@ public class GenerateEffectSizeBoxPlot {
         };
 
         String[] algorithms = new String[]{
-            //            "NSGA-II", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
-//                        "IRACE_7", "ALG_0", "ALG_1", "ALG_2", "ALG_3", "ALG_4", "ALG_5", "ALG_6", "ALG_7", "ALG_8", "ALG_9", "NSGA-II", "SPEA2"
-            "ALG_6", "IRACE_0", "IRACE_1", "IRACE_2", "IRACE_3", "IRACE_4", "IRACE_5", "IRACE_6", "IRACE_7", "IRACE_8", "IRACE_9", "NSGA-II", "SPEA2"
+            "IRACE_7", "IRACE_3", "IRACE_9",
+            "ALG_6", "ALG_2", "ALG_7",
+            "NSGAII", "SPEA2"
         };
 
         File gnuScript = File.createTempFile("GNUPLOT", ".txt");
@@ -64,7 +64,15 @@ public class GenerateEffectSizeBoxPlot {
                     + "\n"
                     + "set for[i=1:words(algorithms)] xtics add (word(algorithms,i) i)\n"
                     + "set datafile separator '\\t'\n"
-                    + "plot 0.5 lc 'black' title '', for[i=1:words(algorithms)] '" + dataSet.getAbsolutePath() + "' using (i):i linestyle 7\n");
+                    + "plot "
+                    + "0.5 lc 'black' title '', "
+//                    + "0.56 lc 'blue' title '', "
+//                    + "0.44 lc 'blue' title '', "
+//                    + "0.64 lc 'green' title '', "
+//                    + "0.36 lc 'green' title '', "
+//                    + "0.71 lc 'red' title '', "
+//                    + "0.29 lc 'red' title '', "
+                    + "for[i=1:words(algorithms)] '" + dataSet.getAbsolutePath() + "' using (i):i linestyle 7\n");
 
             for (String problem : problems) {
 

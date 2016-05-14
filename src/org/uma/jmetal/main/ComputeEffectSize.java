@@ -34,8 +34,9 @@ public class ComputeEffectSize {
         };
 
         String[] algorithms = new String[]{
-            //            "NSGAII", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
-            "ALG_6", "IRACE_7", "NSGAII", "SPEA2"
+            "ALG_6", "ALG_2", "ALG_7",
+            "IRACE_7", "IRACE_3", "IRACE_9",
+            "NSGAII", "SPEA2"
         };
 
         DecimalFormat decimalFormatter = new DecimalFormat("#0.00");
