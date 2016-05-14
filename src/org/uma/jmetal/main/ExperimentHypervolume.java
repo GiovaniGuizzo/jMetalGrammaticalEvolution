@@ -21,7 +21,7 @@ import org.uma.jmetal.util.front.util.FrontUtils;
 public class ExperimentHypervolume {
 
     public static void main(String[] args) throws FileNotFoundException, IOException, InterruptedException {
-        args = new String[]{"0", "experiment/CITO/testing/", "NSGA-II,SPEA2,"
+        args = new String[]{"0", "experiment/CITO/testing/", "NSGAII,SPEA2,"
             //                + "ALG_0,ALG_1,ALG_2,ALG_3,ALG_4,ALG_5,ALG_6,ALG_7,ALG_8,ALG_9,"
             + "ALG_6,"
             //                + "IRACE_0,IRACE_1,IRACE_2,IRACE_3,IRACE_4,IRACE_5,IRACE_6,IRACE_7,IRACE_8,IRACE_9"};

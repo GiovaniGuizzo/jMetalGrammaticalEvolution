@@ -34,8 +34,8 @@ public class ComputeEffectSize {
         };
 
         String[] algorithms = new String[]{
-            //            "NSGA-II", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
-            "ALG_6", "IRACE_7", "NSGA-II", "SPEA2"
+            //            "NSGAII", "SPEA2", "HITO-NSGA-II-CF", "ALG_6"
+            "ALG_6", "IRACE_7", "NSGAII", "SPEA2"
         };
 
         DecimalFormat decimalFormatter = new DecimalFormat("#0.00");
@@ -71,11 +71,8 @@ public class ComputeEffectSize {
             hypervolumeLatexTableBuilder.append("\\\\\n");
             hypervolumeLatexTableBuilder.append("\t\t\\midrule\n");
 
-            StringBuilder coverageLatexTableBuilder = new StringBuilder(hypervolumeLatexTableBuilder.toString());
-
             for (String problem : problems) {
                 hypervolumeLatexTableBuilder.append("\t\t").append(problem.replaceAll("O[OA]\\_", ""));
-                coverageLatexTableBuilder.append("\t\t").append(problem.replaceAll("O[OA]\\_", ""));
 
                 HypervolumeCalculator calculator = new HypervolumeCalculator();
 
