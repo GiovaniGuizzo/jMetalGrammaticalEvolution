@@ -42,8 +42,6 @@ public class KruskalWallisTest {
         script = script.substring(0, script.lastIndexOf(","));
         script += "),each=" + size + "));";
         script += "\n";
-        script += "result <- kruskal.test(ARRAY,categs)\n";
-        script += "m <- data.frame(result$statistic,result$p.value)\n";
         script += "pos_teste <- kruskalmc(ARRAY,categs)\n";
         script += "print(pos_teste)";
 

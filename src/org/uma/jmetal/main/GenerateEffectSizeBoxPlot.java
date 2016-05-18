@@ -28,8 +28,8 @@ public class GenerateEffectSizeBoxPlot {
         };
 
         String[] algorithms = new String[]{
-            "IRACE_7", "IRACE_3", "IRACE_9",
             "ALG_6", "ALG_2", "ALG_7",
+            "IRACE_7", "IRACE_3", "IRACE_9",
             "NSGAII", "SPEA2"
         };
 
@@ -44,9 +44,10 @@ public class GenerateEffectSizeBoxPlot {
             dataSetWriter.write("# Effect sizes for algorithm " + algorithms[0] + ":\t" + Arrays.stream(algorithms).skip(1).collect(Collectors.joining("\t")));
             dataSetWriter.write("\n");
 
-            gnuScriptWriter.write("set term png size 1024,768\n"
+            gnuScriptWriter.write("set term png size 1024,768 \n"
+                    + "set tics font \"Verdana,18\"\n"
                     + "set output \"experiment/CITO/testing/" + algorithms[0] + ".png\"\n"
-                    + "algorithms = \"" + Arrays.stream(algorithms).skip(1).collect(Collectors.joining(" ")) + "\"\n"
+                    + "algorithms = \"" + Arrays.stream(algorithms).skip(1).map(value -> value.replace("ALG", "GE").replaceAll("\\_", "\\\\\\\\_")).collect(Collectors.joining(" ")) + "\"\n"
                     + "unset key\n"
                     + "set grid ytics\n"
                     + "\n"
@@ -55,10 +56,11 @@ public class GenerateEffectSizeBoxPlot {
                     + "set style data boxplot\n"
                     + "set style line 7 linecolor \"white\" lw 2\n"
                     + "\n"
-                    + "set ylabel \"Effect Size Value\"\n"
+                    + "set ylabel \"Effect Size Value\" font \"Verdana,18\"\n"
                     + "set ytics 0.1 nomirror\n"
+                    + "set yrange [0:1]"
                     + "\n"
-                    + "set xlabel \"Algorithms Compared to " + algorithms[0] + "\"\n"
+                    + "set xlabel \"Algorithms to which " + algorithms[0].replace("ALG", "GE").replaceAll("\\_", "\\\\\\\\_") + " was compared\" font \"Verdana,18\"\n"
                     + "set xtics 1 nomirror\n"
                     + "set format x \"\"\n"
                     + "\n"

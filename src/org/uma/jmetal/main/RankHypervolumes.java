@@ -12,7 +12,7 @@ import org.apache.commons.math3.stat.ranking.NaturalRanking;
 import org.uma.jmetal.measure.qualityindicator.HypervolumeCalculator;
 import org.uma.jmetal.measure.statistic.FriedmanTest;
 import org.uma.jmetal.measure.statistic.KruskalWallisTest;
-import org.uma.jmetal.util.MapToLatexConverter;
+import org.uma.jmetal.util.LatexTableBuilder;
 
 public class RankHypervolumes {
 
@@ -80,6 +80,7 @@ public class RankHypervolumes {
                     .stream()
                     .collect(Collectors.toMap(Map.Entry::getKey, (entry) -> Arrays.stream(entry.getValue()).mapToDouble(Double::doubleValue).average().getAsDouble()));
 
+            System.out.println("Problem: " + problem);
             HashMap<String, HashMap<String, Boolean>> kruskalResult = KruskalWallisTest.test(hypervolumeHashMap);
 
             double[] algorithmRanks = ranking.rank(Arrays.stream(algorithms)
@@ -153,7 +154,12 @@ public class RankHypervolumes {
                     });
                 });
         
-        System.out.println(MapToLatexConverter.convert("Hypervolume and Ranks", "Hypervolume and Ranks", allRanks));
+        LatexTableBuilder tableBuilder =  new LatexTableBuilder();
+        tableBuilder.setCaption("Hypervolume and Ranks")
+                .setLabel("tab:Hypervolume and Ranks")
+                .setFirstColumnHeader("System");
+        
+        System.out.println(tableBuilder.build(allRanks));
 
         HashMap<String, double[]> hypervolumeAverages = new HashMap<>();
         for (String algorithm : algorithms) {
@@ -177,7 +183,11 @@ public class RankHypervolumes {
                                                 entry2 -> entry2.getKey(),
                                                 entry2 -> entry.getKey().equals(entry2.getKey()) ? "-" : entry2.getValue().toString()))));
 
-        System.out.println(MapToLatexConverter.convert("Friedman", "Friedman", collect));
+         tableBuilder.setCaption("Friedman")
+                .setLabel("tab:Friedman")
+                .setFirstColumnHeader("Algortihms");
+        
+        System.out.println(tableBuilder.build(collect));
     }
 
 }
