@@ -38,7 +38,7 @@ public class ExperimentAlgorithmsCITONSGAIIAndSPEA2 {
 
             //load NSGA-II
             {
-                GeneticAlgorithmExpressionMapper mapper = new GeneticAlgorithmExpressionMapper(2, 5);
+                GeneticAlgorithmExpressionMapper<?> mapper = new GeneticAlgorithmExpressionMapper(2, 5);
                 mapper.loadGrammar("grammar_nsgaii.bnf");
 
                 List<Integer> grammarInstance = new ArrayList<>();
@@ -68,7 +68,7 @@ public class ExperimentAlgorithmsCITONSGAIIAndSPEA2 {
 
             //load SPEA2
             {
-                GeneticAlgorithmExpressionMapper mapper = new GeneticAlgorithmExpressionMapper(2, 5);
+                GeneticAlgorithmExpressionMapper<?> mapper = new GeneticAlgorithmExpressionMapper(2, 5);
                 mapper.loadGrammar("grammar_spea2.bnf");
 
                 List<Integer> grammarInstance = new ArrayList<>();

@@ -42,12 +42,12 @@ public class SymbolicExpressionGrammarMapper extends AbstractGrammarMapper<Strin
     }
 
     @Override
-    public String interpret(List<Integer> grammarInstance) {
+    protected synchronized String hookInterpret(List<Integer> grammarInstance) {
         currentIndex = 0;
         numberOfWraps = 0;
         currentDepth = 1;
         visitedNodes = new ArrayList<>();
-        return getNodeValue(rootNode, new ArrayList<>(grammarInstance));
+        return getNodeValue(rootNode, grammarInstance);
     }
 
     private String getNodeValue(Node node, List<Integer> grammarInstance) {

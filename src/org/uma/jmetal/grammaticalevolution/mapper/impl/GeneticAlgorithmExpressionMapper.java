@@ -43,7 +43,7 @@ public class GeneticAlgorithmExpressionMapper<S extends Solution<?>> extends Abs
     }
 
     @Override
-    public synchronized AbstractDynamicGeneticAlgorithm<S> interpret(List<Integer> grammarInstance) {
+    protected synchronized AbstractDynamicGeneticAlgorithm<S> hookInterpret(List<Integer> grammarInstance) {
         currentIndex = 0;
         GeneratedDynamicGeneticAlgorithmBuilder<S> builder = new GeneratedDynamicGeneticAlgorithmBuilder<>();
 
@@ -252,7 +252,7 @@ public class GeneticAlgorithmExpressionMapper<S extends Solution<?>> extends Abs
 //        grammarInstance.add(405);
 //        grammarInstance.add(500);
 //        grammarInstance.add(602);
-        AbstractDynamicGeneticAlgorithm interpret = mapper.interpret(grammarInstance);
+        AbstractDynamicGeneticAlgorithm interpret = mapper.hookInterpret(grammarInstance);
     }
 
 }

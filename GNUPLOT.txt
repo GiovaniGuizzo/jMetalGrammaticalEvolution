@@ -8,72 +8,44 @@ set key out
 
 set xlabel "Objective 1" 
 set ylabel "Objective 2"
+set pointsize 2
 
-## kroA100.tsp
+## OA_AJHsqldb
 
-set output 'experiment/graphs/kro100.png'
-plot 'experiment/final_pegasus/kroA100.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA100.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/kroA100.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/kroA100.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/kroA100.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/kroA100.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/kroA100.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/kroA100.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/kroA100.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/kroA100.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/kroA100.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/kroA100.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/kroA100.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OA_AJHsqldb.png'
+plot 'experiment/CITO/testing/OA_AJHsqldb/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OA_AJHsqldb/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OA_AJHsqldb/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OA_AJHsqldb/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OA_AJHsqldb/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OA_AJHsqldb/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OA_AJHsqldb/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OA_AJHsqldb/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## kroA150.tsp
+## OO_MyBatis
 
-set output 'experiment/graphs/kro150.png'
-plot 'experiment/final_pegasus/kroA150.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA150.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/kroA150.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/kroA150.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/kroA150.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/kroA150.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/kroA150.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/kroA150.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/kroA150.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/kroA150.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/kroA150.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/kroA150.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/kroA150.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OO_MyBatis.png'
+plot 'experiment/CITO/testing/OO_MyBatis/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OO_MyBatis/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OO_MyBatis/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OO_MyBatis/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OO_MyBatis/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OO_MyBatis/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OO_MyBatis/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OO_MyBatis/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## kroA200.tsp
+## OA_AJHotDraw
 
-set output 'experiment/graphs/kro200.png'
-plot 'experiment/final_pegasus/kroA200.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA200.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/kroA200.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/kroA200.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/kroA200.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/kroA200.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/kroA200.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/kroA200.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/kroA200.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/kroA200.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/kroA200.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/kroA200.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/kroA200.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OA_AJHotDraw.png'
+plot 'experiment/CITO/testing/OA_AJHotDraw/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OA_AJHotDraw/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OA_AJHotDraw/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OA_AJHotDraw/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OA_AJHotDraw/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OA_AJHotDraw/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OA_AJHotDraw/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OA_AJHotDraw/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## euclidA100.tsp
+## OO_BCEL
 
-set output 'experiment/graphs/euclid100.png'
-plot 'experiment/final_pegasus/euclidA100.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA100.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA100.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/euclidA100.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA100.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA100.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA100.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA100.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA100.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA100.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA100.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA100.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA100.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OO_BCEL.png'
+plot 'experiment/CITO/testing/OO_BCEL/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OO_BCEL/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OO_BCEL/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OO_BCEL/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OO_BCEL/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OO_BCEL/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OO_BCEL/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OO_BCEL/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## euclidA300.tsp
+## OO_JHotDraw
 
-set output 'experiment/graphs/euclid300.png'
-plot 'experiment/final_pegasus/euclidA300.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA300.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA300.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/euclidA300.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA300.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA300.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA300.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA300.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA300.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA300.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA300.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA300.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA300.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OO_JHotDraw.png'
+plot 'experiment/CITO/testing/OO_JHotDraw/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OO_JHotDraw/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OO_JHotDraw/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OO_JHotDraw/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OO_JHotDraw/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OO_JHotDraw/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OO_JHotDraw/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OO_JHotDraw/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## euclidA500.tsp
+## OA_HealthWatcher
 
-set output 'experiment/graphs/euclid500.png'
-plot 'experiment/final_pegasus/euclidA500.tsp/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA500.tsp/SPEA2/FUN_ALL.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA500.tsp/IBEA/FUN_ALL.txt' title 'IBEA', 'experiment/final_pegasus/euclidA500.tsp/ALG_0/FUN_ALL.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA500.tsp/ALG_1/FUN_ALL.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA500.tsp/ALG_2/FUN_ALL.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA500.tsp/ALG_3/FUN_ALL.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA500.tsp/ALG_4/FUN_ALL.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA500.tsp/ALG_5/FUN_ALL.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA500.tsp/ALG_6/FUN_ALL.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA500.tsp/ALG_7/FUN_ALL.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA500.tsp/ALG_8/FUN_ALL.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA500.tsp/ALG_9/FUN_ALL.txt' title 'ALG_9',
+set output 'experiment/CITO/graphs/OA_HealthWatcher.png'
+plot 'experiment/CITO/testing/OA_HealthWatcher/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OA_HealthWatcher/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OA_HealthWatcher/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OA_HealthWatcher/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OA_HealthWatcher/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OA_HealthWatcher/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OA_HealthWatcher/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OA_HealthWatcher/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-###############
-# HYPERVOLUME #
-###############
+## OA_TollSystems
 
-set xtics 10
-set xlabel "Fitness Evaluations (each 1,000)" 
-set ylabel "Hypervolume"
-set style data lines
+set output 'experiment/CITO/graphs/OA_TollSystems.png'
+plot 'experiment/CITO/testing/OA_TollSystems/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OA_TollSystems/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OA_TollSystems/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OA_TollSystems/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OA_TollSystems/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OA_TollSystems/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OA_TollSystems/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OA_TollSystems/SPEA2/FUN_ALL.txt' title 'SPEA2'
 
-## kroA100.tsp
+## OO_JBoss
 
-set output 'experiment/graphs/kro100_hv.png'
-plot 'experiment/final_pegasus/kroA100.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA100.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/kroA100.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/kroA100.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/kroA100.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/kroA100.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/kroA100.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/kroA100.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/kroA100.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/kroA100.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/kroA100.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/kroA100.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/kroA100.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
-
-## kroA150.tsp
-
-set output 'experiment/graphs/kro150_hv.png'
-plot 'experiment/final_pegasus/kroA150.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA150.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/kroA150.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/kroA150.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/kroA150.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/kroA150.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/kroA150.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/kroA150.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/kroA150.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/kroA150.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/kroA150.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/kroA150.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/kroA150.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
-
-## kroA200.tsp
-
-set output 'experiment/graphs/kro200_hv.png'
-plot 'experiment/final_pegasus/kroA200.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/kroA200.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/kroA200.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/kroA200.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/kroA200.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/kroA200.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/kroA200.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/kroA200.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/kroA200.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/kroA200.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/kroA200.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/kroA200.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/kroA200.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
-
-## euclidA100.tsp
-
-set output 'experiment/graphs/euclid100_hv.png'
-plot 'experiment/final_pegasus/euclidA100.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA100.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA100.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/euclidA100.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA100.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA100.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA100.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA100.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA100.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA100.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA100.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA100.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA100.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
-
-## euclidA300.tsp
-
-set output 'experiment/graphs/euclid300_hv.png'
-plot 'experiment/final_pegasus/euclidA300.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA300.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA300.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/euclidA300.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA300.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA300.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA300.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA300.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA300.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA300.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA300.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA300.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA300.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
-
-## euclidA500.tsp
-
-set output 'experiment/graphs/euclid500_hv.png'
-plot 'experiment/final_pegasus/euclidA500.tsp/NSGAII/EXECUTION_0/GEN_HV.txt' title 'NSGA-II', 'experiment/final_pegasus/euclidA500.tsp/SPEA2/EXECUTION_0/GEN_HV.txt' title 'SPEA2', 'experiment/final_pegasus/euclidA500.tsp/IBEA/EXECUTION_0/GEN_HV.txt' title 'IBEA', 'experiment/final_pegasus/euclidA500.tsp/ALG_0/EXECUTION_0/GEN_HV.txt' title 'ALG_0', 'experiment/final_pegasus/euclidA500.tsp/ALG_1/EXECUTION_0/GEN_HV.txt' title 'ALG_1', 'experiment/final_pegasus/euclidA500.tsp/ALG_2/EXECUTION_0/GEN_HV.txt' title 'ALG_2', 'experiment/final_pegasus/euclidA500.tsp/ALG_3/EXECUTION_0/GEN_HV.txt' title 'ALG_3', 'experiment/final_pegasus/euclidA500.tsp/ALG_4/EXECUTION_0/GEN_HV.txt' title 'ALG_4', 'experiment/final_pegasus/euclidA500.tsp/ALG_5/EXECUTION_0/GEN_HV.txt' title 'ALG_5', 'experiment/final_pegasus/euclidA500.tsp/ALG_6/EXECUTION_0/GEN_HV.txt' title 'ALG_6', 'experiment/final_pegasus/euclidA500.tsp/ALG_7/EXECUTION_0/GEN_HV.txt' title 'ALG_7', 'experiment/final_pegasus/euclidA500.tsp/ALG_8/EXECUTION_0/GEN_HV.txt' title 'ALG_8', 'experiment/final_pegasus/euclidA500.tsp/ALG_9/EXECUTION_0/GEN_HV.txt' title 'ALG_9'
+set output 'experiment/CITO/graphs/OO_JBoss.png'
+plot 'experiment/CITO/testing/OO_JBoss/ALG_6/FUN_ALL.txt' title 'GE\_6', 'experiment/CITO/testing/OO_JBoss/ALG_2/FUN_ALL.txt' title 'GE\_2', 'experiment/CITO/testing/OO_JBoss/ALG_7/FUN_ALL.txt' title 'GE\_7', 'experiment/CITO/testing/OO_JBoss/IRACE_7/FUN_ALL.txt' title 'IRACE\_7', 'experiment/CITO/testing/OO_JBoss/IRACE_3/FUN_ALL.txt' title 'IRACE\_3', 'experiment/CITO/testing/OO_JBoss/IRACE_9/FUN_ALL.txt' title 'IRACE\_9', 'experiment/CITO/testing/OO_JBoss/NSGAII/FUN_ALL.txt' title 'NSGA-II', 'experiment/CITO/testing/OO_JBoss/SPEA2/FUN_ALL.txt' title 'SPEA2'

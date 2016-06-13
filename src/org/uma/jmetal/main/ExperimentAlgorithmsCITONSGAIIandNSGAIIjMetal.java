@@ -38,7 +38,7 @@ public class ExperimentAlgorithmsCITONSGAIIandNSGAIIjMetal {
             CITOProblem cito = new CITOProblem("problems/" + problem + ".txt");
 
             {
-                GeneticAlgorithmExpressionMapper mapper = new GeneticAlgorithmExpressionMapper(2, 5);
+                GeneticAlgorithmExpressionMapper<?> mapper = new GeneticAlgorithmExpressionMapper(2, 5);
                 mapper.loadGrammar("grammar_nsgaii.bnf");
 
                 List<Integer> grammarInstance = new ArrayList<>();

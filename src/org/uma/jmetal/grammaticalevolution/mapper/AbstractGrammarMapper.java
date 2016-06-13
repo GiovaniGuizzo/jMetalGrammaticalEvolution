@@ -2,6 +2,7 @@ package org.uma.jmetal.grammaticalevolution.mapper;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
@@ -40,13 +41,17 @@ public abstract class AbstractGrammarMapper<T> {
     public void setRootNode(Node rootNode) {
         this.rootNode = rootNode;
     }
-
-    // <editor-fold defaultstate="expanded" desc="Mapping Section">
-    public abstract T interpret(List<Integer> grammarInstance);
+    
+    public T interpret(List<Integer> grammarInstance){
+        return hookInterpret(new ArrayList<>(grammarInstance));
+    }
 
     public T interpret(VariableIntegerSolution grammarInstance) {
         return interpret(grammarInstance.getVariables());
     }
+
+    // <editor-fold defaultstate="expanded" desc="Mapping Section">
+    protected abstract T hookInterpret(List<Integer> grammarInstance);
 
     public boolean loadGrammar(String grammarFilePath) {
         return loadGrammar(new File(grammarFilePath));
