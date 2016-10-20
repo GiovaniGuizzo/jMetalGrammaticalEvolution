@@ -16,7 +16,7 @@ import org.uma.jmetal.util.JMetalException;
 
 public abstract class AbstractGrammarMapper<T> {
 
-    public static final String BNF_MATCHER = "((?<=<)[^<>]+(?=>))|((?<=\\\").*(?=\\\")|\\(|\\))";
+    public static final String BNF_MATCHER = "((?<=<).+?(?=>))|((?<=\")(?:[\\S]+?.*?|)(?=\")|\\(|\\))";
     public static final int NON_TERMINAL_NODE = 1;
     public static final int TERMINAL_NODE = 2;
 
