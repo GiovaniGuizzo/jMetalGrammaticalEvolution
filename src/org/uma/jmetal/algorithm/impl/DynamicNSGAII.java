@@ -28,7 +28,7 @@ public class DynamicNSGAII<S extends Solution<?>> extends DefaultDynamicGeneticA
                 new RandomInitialization<>(),
                 new OnlyPopulationSelection<>(),
                 new GenerationalTwoChildrenReproduction<>(),
-                new RankingAndDiversityReplacement<>(new DominanceDepth(), new CrowdingDistance<S>()),
+                new RankingAndDiversityReplacement<>(new DominanceDepth<S>(), new CrowdingDistance<S>()),
                 null,
                 selectionOperator,
                 crossoverOperator,
