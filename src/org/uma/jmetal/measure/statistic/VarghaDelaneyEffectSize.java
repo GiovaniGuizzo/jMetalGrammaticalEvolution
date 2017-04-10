@@ -3,12 +3,7 @@ package org.uma.jmetal.measure.statistic;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class VarghaDelaneyEffectSize {
 
@@ -17,18 +12,18 @@ public class VarghaDelaneyEffectSize {
     public static final String MEDIUM = "medium";
     public static final String LARGE = "large";
 
-    public static HashMap<String, HashMap<String, Double>> computeEffectSize(HashMap<String, double[]> values) throws IOException, InterruptedException {
+    public static HashMap<String, HashMap<String, Double>> computeEffectSize(HashMap<String, Double[]> values) throws IOException, InterruptedException {
         HashMap<String, HashMap<String, Double>> result = new HashMap<>();
 
         StringBuilder script = new StringBuilder();
         script.append("require(\"effsize\")\n");
 
-        for (Map.Entry<String, double[]> entrySet : values.entrySet()) {
+        for (Map.Entry<String, Double[]> entrySet : values.entrySet()) {
             String group = entrySet.getKey();
-            double[] groupValues = entrySet.getValue();
+            Double[] groupValues = entrySet.getValue();
 
-            script.append(group).append(" <- c(");
-            for (double value : groupValues) {
+            script.append("\"").append(group).append("\" <- c(");
+            for (Double value : groupValues) {
                 script.append(value).append(",");
             }
             script.deleteCharAt(script.length() - 1).append(")\n");
@@ -40,7 +35,7 @@ public class VarghaDelaneyEffectSize {
             String groupA = groupArray[i];
             for (int j = i + 1; j < groupArray.length; j++) {
                 String groupB = groupArray[j];
-                script.append("VD.A(").append(groupA).append(",").append(groupB).append(")\n");
+                script.append("VD.A(get(\"").append(groupA).append("\"),get(\"").append(groupB).append("\"))\n");
             }
         }
         script.append("q()");

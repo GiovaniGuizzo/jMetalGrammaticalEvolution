@@ -68,12 +68,12 @@ public class GenerateEffectSizeBoxPlot {
                     + "set datafile separator '\\t'\n"
                     + "plot "
                     + "0.5 lc 'black' title '', "
-//                    + "0.56 lc 'blue' title '', "
-//                    + "0.44 lc 'blue' title '', "
-//                    + "0.64 lc 'green' title '', "
-//                    + "0.36 lc 'green' title '', "
-//                    + "0.71 lc 'red' title '', "
-//                    + "0.29 lc 'red' title '', "
+                    //                    + "0.56 lc 'blue' title '', "
+                    //                    + "0.44 lc 'blue' title '', "
+                    //                    + "0.64 lc 'green' title '', "
+                    //                    + "0.36 lc 'green' title '', "
+                    //                    + "0.71 lc 'red' title '', "
+                    //                    + "0.29 lc 'red' title '', "
                     + "for[i=1:words(algorithms)] '" + dataSet.getAbsolutePath() + "' using (i):i linestyle 7\n");
 
             for (String problem : problems) {
@@ -92,13 +92,13 @@ public class GenerateEffectSizeBoxPlot {
                     }
                 }
 
-                HashMap<String, double[]> hypervolumeHashMap = new HashMap<>();
+                HashMap<String, Double[]> hypervolumeHashMap = new HashMap<>();
 
                 for (String algorithm : algorithms) {
                     String path = "experiment/CITO/testing/" + problem + "/";
                     String hyperheuristicDirectory = path + algorithm + "/";
 
-                    double[] hypervolumes = new double[executions];
+                    Double[] hypervolumes = new Double[executions];
 
                     for (int j = 0; j < executions; j++) {
                         try {

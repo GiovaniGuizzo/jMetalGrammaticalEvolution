@@ -89,13 +89,13 @@ public class ComputeEffectSize {
                     }
                 }
 
-                HashMap<String, double[]> hypervolumeHashMap = new HashMap<>();
+                HashMap<String, Double[]> hypervolumeHashMap = new HashMap<>();
 
                 for (String algorithm : algorithms) {
                     String path = "experiment/CITO/testing/" + problem + "/";
                     String hyperheuristicDirectory = path + algorithm + "/";
 
-                    double[] hypervolumes = new double[executions];
+                    Double[] hypervolumes = new Double[executions];
 
                     for (int j = 0; j < executions; j++) {
                         try {

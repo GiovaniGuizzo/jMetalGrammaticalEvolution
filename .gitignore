@@ -4,7 +4,7 @@
 /build/
 /dist/
 /jMetal.log
-/experiment
+/experiment*
 /latex
 /results/
 /irace/arena/*
